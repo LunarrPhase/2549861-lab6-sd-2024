@@ -44,7 +44,7 @@ module.exports = async function (context, req) {
     // }
 
 
-}
+
 
 
 const express = require('express');
@@ -99,3 +99,33 @@ app.post('/api/cars', (req, res) => {
 app.listen(3001, () => {
     console.log('Server started at http://localhost:3001');
 });
+
+
+if (req.method === 'GET') {
+    // Handle GET requests
+    // Example: Return all cars
+    context.res = {
+        status: 200,
+        body: cars
+    };
+} else if (req.method === 'POST') {
+    // Handle POST requests
+    // Example: Add a new car
+    const newCar = req.body;
+    cars.push(newCar);
+    context.res = {
+        status: 201,
+        body: newCar
+    };
+} else {
+    // Handle other HTTP methods
+    context.res = {
+        status: 405,
+        body: "Method Not Allowed"
+    };
+}
+
+
+
+
+};
