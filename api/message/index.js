@@ -59,19 +59,19 @@ app.use(bodyParser.json());
 
 //get all cars
 // /api
-app.get('/cars', (req, res) => {
+app.get('/api/cars', (req, res) => {
     res.json(cars);
 });
 
 //get car by id
-app.get('/cars/:id', (req, res) => {
+app.get('/api/cars/:id', (req, res) => {
     const id = req.params.id;
     const car = cars.find(car => car.id === id);
     res.json(car);
 });
 
 //update car
-app.put('/cars/:id', (req, res) => {
+app.put('/api/cars/:id', (req, res) => {
     const id = req.params.id;
     const updatedCar = req.body;
     const index = cars.findIndex(car => car.id === id);
@@ -80,7 +80,7 @@ app.put('/cars/:id', (req, res) => {
 });
 
 //delete car
-app.delete('/cars/:id', (req, res) => {
+app.delete('/api/cars/:id', (req, res) => {
     const id = req.params.id;
     const index = cars.findIndex(car => car.id === id);
     cars.splice(index, 1);
@@ -88,7 +88,7 @@ app.delete('/cars/:id', (req, res) => {
 });
 
 //add car
-app.post('/cars', (req, res) => {
+app.post('/api/cars', (req, res) => {
     console.log(req);
     const newCar = req.body;
     //console.log(newCar);
