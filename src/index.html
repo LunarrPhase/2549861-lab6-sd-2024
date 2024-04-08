@@ -38,6 +38,16 @@
         <p>&copy; 2024 Lucky-Lot Cars</p>
     </footer>
 
+
+    <script>
+        (async function() {
+            const { text } = await( await fetch(`/api/message`)).json();
+            document.querySelector('#make').textContent = text;
+        }());
+        </script>
+
+
+
 </body>
 
 </html>
