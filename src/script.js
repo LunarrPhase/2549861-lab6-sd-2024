@@ -59,7 +59,7 @@ function addCar(newCar) {
             console.log("in the add car before post");
         })
         .catch(error => {
-            console.log(data);
+            
             console.error('Error:', error);
         });
 }
