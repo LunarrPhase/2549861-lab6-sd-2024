@@ -3,13 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const carList = document.getElementById('carList');
     cars = [];
 
-    // (async function(){
-    //     const{text} = await(await fetch(`/api/message`)).json();
-    //     document.querySelector('#name').textContent = text;
-
-    // }());
-
-
 
     loadCarsBtn.addEventListener('click', () => {
         //fetch('http://localhost:3001/cars')
