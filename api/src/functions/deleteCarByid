@@ -6,12 +6,10 @@ const fs = require('fs').promises;
 const carsFilePath = 'cars.json';
 
 app.http('deleteCarByid',{
-
     methods:['DELETE'],
     route: 'cars/{carID}',
     handler: async (request, context) =>{
         try {
-            
             const id = request.params.carID
             const carsData = await fs.readFile(carsFilePath, 'utf8');
             let cars = JSON.parse(carsData);
