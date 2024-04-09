@@ -10,11 +10,12 @@ app.http('deleteCarByid',{
     route: 'cars/{carID}',
     handler: async (request, context) =>{
         try {
-            const id = request.params.carID
-            const carsData = await fs.readFile(carsFilePath, 'utf8');
+            //const id = request.params.carID
+            const carID = request.params.carID;
+            const carsData = await fs.readFile(cars.json, 'utf8');
             let cars = JSON.parse(carsData);
 
-            const index = cars.findIndex(car => car.id === id);
+            const index = cars.findIndex(car => car.id === carID);
             if(index !==-1)
             {
                 cars.splice(index, 1);
