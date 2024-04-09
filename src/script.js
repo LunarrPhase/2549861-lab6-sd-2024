@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ///api
         //fetch('http://example.azurewebsites.net/api/cars')
         //https://nice-mushroom-089200d03.5.azurestaticapps.net/
-        fetch('https://nice-mushroom-089200d03.5.azurestaticapps.net/api/cars')
+        fetch('/api/cars')
             .then(response => response.json())
             .then(data => {
                 console.log("I am in the fetch data sceip in load cars btn, cars: "+cars);
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 function addCar(newCar) {
     //'http://localhost:3001/cars'
-    fetch('https://nice-mushroom-089200d03.5.azurestaticapps.net/api/cars', {
+    fetch('/api/cars', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
