@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch('https://nice-mushroom-089200d03.5.azurestaticapps.net/api/cars')
             .then(response => response.json())
             .then(data => {
+                console.log("I am in the fetch data sceip in load cars btn, cars: "+cars);
                 cars = data;
                 carList.innerHTML = '';
                 data.forEach((car, index) => {
@@ -42,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 function addCar(newCar) {
     //'http://localhost:3001/cars'
-    fetch('/api/cars', {
+    fetch('https://nice-mushroom-089200d03.5.azurestaticapps.net/api/cars', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -55,8 +56,10 @@ function addCar(newCar) {
             //reload cars
             // const loadCarsBtn = document.getElementById('loadCarsBtn');
             loadCarsBtn.click();
+            console.log("in the add car before post");
         })
         .catch(error => {
+            console.log(data);
             console.error('Error:', error);
         });
 }
