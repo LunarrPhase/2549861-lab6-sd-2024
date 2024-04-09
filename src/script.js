@@ -7,8 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadCarsBtn.addEventListener('click', () => {
         //fetch('http://localhost:3001/cars')
         ///api
-        //fetch('http://example.azurewebsites.net/api/cars')
-        //https://nice-mushroom-089200d03.5.azurestaticapps.net/
+     
         fetch('/api/cars')
             .then(response => response.json())
             .then(data => {
