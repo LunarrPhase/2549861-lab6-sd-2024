@@ -4,53 +4,6 @@
 //module.exports = async function (context, req) {
  
 
-const { app } = require('@azure/functions');
-const carsData = require('./cars.json');
-
-app.http('cars', {
-    methods: ['GET'],
-    authlevel: 'anonymous',
-    handler: async (request, context) =>{
-        try{
-            return{
-                status:200,
-                headers:{
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-
-            };
-        }catch(error){
-            console.error('Error handling request:', error);
-            return {
-                status: 500,
-                body: 'Server Error, Could not process request.'
-            };
-        }
-        
-        
-    }
-
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //const express = require('express');
