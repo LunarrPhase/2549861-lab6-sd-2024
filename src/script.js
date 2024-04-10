@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //fetch('http://localhost:3001/cars')
         ///api
      
-        fetch('/api/cars')
+        fetch('/api/src/cars')
             .then(response => response.json())
             .then(data => {
                 //console.log("I am in the fetch data script in load cars btn, cars: "+cars);
