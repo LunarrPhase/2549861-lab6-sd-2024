@@ -1,8 +1,8 @@
 const { app } = require('@azure/functions');
 const fs = require('fs').promises;
 const data = require('./cars.json');
-
-
+const cors = require('cors');
+app.use(cors());
 
 //returns cars array XD
 app.http('cars', {
