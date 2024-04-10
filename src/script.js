@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 function addCar(newCar) {
+    console.log(newCar);
     //'http://localhost:3001/cars'
     fetch('/api/cars', {
         method: 'POST',
