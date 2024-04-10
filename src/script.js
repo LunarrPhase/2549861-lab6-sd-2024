@@ -50,7 +50,7 @@ function addCar(newCar) {
             //reload cars
             // const loadCarsBtn = document.getElementById('loadCarsBtn');
             loadCarsBtn.click();
-            console.log("in the add car before post");
+            //console.log("in the add car before post");
         })
         .catch(error => {
             

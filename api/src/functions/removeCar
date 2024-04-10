@@ -5,7 +5,7 @@ const fs = require('fs').promises;
 const jsonFilePath = path.resolve(__dirname, 'cars.json');
 //const carsFilePath = 'cars.json';
 
-app.http('deleteCarByid',{
+app.http('removeCar',{
     methods:['DELETE'],
     route: 'cars/{carID}',
     handler: async (request, context) =>{
