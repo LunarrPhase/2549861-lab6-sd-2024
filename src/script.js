@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch('/api/cars')
             .then(response => response.json())
             .then(data => {
-                console.log("I am in the fetch data sceip in load cars btn, cars: "+cars);
+                //console.log("I am in the fetch data script in load cars btn, cars: "+cars);
                 cars = data;
                 carList.innerHTML = '';
                 data.forEach((car, index) => {

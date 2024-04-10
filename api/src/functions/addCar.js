@@ -7,8 +7,8 @@ app.http('addCar', {
         try{
         newCar = await request.json();
 
-        const cardata = await fs.readFile(cars.json,'utf8');
-        const cars = JSON.parse(carsData);
+        const carData = await fs.readFile(cars.json,'utf8');
+        const cars = JSON.parse(carData);
 
         await fs.writeFile(cars.json, JSON.stringify(cars, null, 2),'utf8');
 
